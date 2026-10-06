@@ -1,0 +1,384 @@
+/* 
+  References:
+  - Elemuwa, F, 2026. rem vs em - Everything you need to know. [blog]
+    Available at: <https://refine.dev/blog/rem-vs-em/>
+    [Accessed 6 October 2026]
+  - MDN Web Docs, 2026. Targeting media types. [online] 
+    Available at: <https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_types> 
+    [Accessed 6 October 2026].
+  - MDN Web Docs, 2026. Responsive images. [online] 
+    Available at: <https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images> 
+    [Accessed 6 October 2026].
+*/
+/* ---------- Colour Palette & Reset ---------- */
+:root {
+  --teal: #16c8c8;          /* hero colour   */
+  --teal-dark: #0ea8a8;     /* darker teal (hover) */
+  --navy: #122a3a;          /* headings   */
+  --grey-text: #4a5560;     /* paragraph text      */
+  --bg-light: #f2f4f5;      /* footer / panels     */
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  color: var(--grey-text);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;   /* responsive images */
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--teal-dark);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+a:active {
+  color: var(--teal-dark);
+}
+
+/* -------Typography ------- */
+h1, h2, h3, h4 {
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.2rem; }
+p  { font-size: 1rem; margin-bottom: 1rem; }
+
+/* ---------- Header / Navigation ---------- */
+header {
+  background-color: var(--white);
+  border-bottom: 1px solid #dfe4e7;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--teal-dark);
+  border-bottom: 2px solid var(--teal);
+}
+
+nav a:active {
+  color: var(--navy);
+}
+
+/* ---------- Main sections ---------- */
+main {
+  padding: 2rem 5%;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* ---------- Hero (home page) ---------- */
+.hero {
+  margin: -2rem -5% 3rem; /* bleed hero to page edges */
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 4rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero h1,
+.hero p {
+  color: var(--white);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 30rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--teal-dark);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.btn:active {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+/* ---------- Card grids  (layout and breakpoints) ---------- */
+.grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.grid > div,
+.card {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: var(--bg-light);
+  border: 1px solid #dfe4e7;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+/* ---------- Services page ---------- */
+.animals {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.animal-card {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: var(--teal);
+  color: var(--navy);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.animal-card h3,
+.animal-card h4,
+.animal-card p {
+  color: var(--navy);
+  padding: 0 1rem;
+}
+
+.animal-card p {
+  font-size: 0.95rem;
+}
+
+.animal-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+
+}
+
+.services-section {
+  background-color: var(--teal);
+  margin: 3rem -5% -2rem; /* bleed to page edges */
+  padding: 2.5rem 5%;
+}
+
+.services-section h2,
+.services-section h3 {
+  color: var(--navy);
+}
+
+.services-section > div > div {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  flex: 1 1 0;
+}
+
+.services-section > div {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- About page ---------- */
+.two-col {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.two-col > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.team-list {
+  list-style: none;
+}
+
+.team-list li {
+  background-color: var(--bg-light);
+  border: 1px solid #dfe4e7;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ----- Enquiry and Contact pages ----- */
+.form-page {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-page > .intro {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.form-panel {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: var(--bg-light);
+  border: 1px solid #dfe4e7;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.form-panel h3 {
+  margin-top: 1rem;
+}
+
+.form-panel hr {
+  border: none;
+  border-bottom: 1px solid #c8ced2;
+  margin-bottom: 1rem;
+}
+
+/* ----- Footer ------ */
+footer {
+  background-color: var(--bg-light);
+  text-align: center;
+  padding: 1.5rem 5%;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Design ----*/
+
+/* ---- Breakpoints: tablet ---- */
+@media (max-width: 48rem) { /* 768px */
+  h1 { font-size: 2rem; }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Forced services-section inner boxes to stack and reset flex basics */
+  .grid,
+  .animals,
+  .services-section > div {
+    flex-direction: column; /* single column layout */
+  }
+  
+  /* Ensures the nested elements inside the services container expand to full width */
+  .services-section > div > div {
+    flex: 1 1 auto; 
+    width: 100%;
+  }
+
+  /* Switched to auto height or max-height so text expansion doesn't clip the graphic */
+  .animal-card img {
+    height: auto;
+    max-height: 14rem;
+  }
+}
+
+/* ---- Breakpoints: mobile ---- */
+@media (max-width: 30rem) { /* 480px */
+  h1 { 
+    font-size: 2.2rem; 
+  }
+  h2 { 
+    font-size: 1.9rem; 
+  }
+  p {
+    font-size: 1.2rem; 
+  }
+
+  main {
+    padding: 1.25rem 5%;
+  }
+
+  .hero {
+    padding: 2.5rem 5%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ADDED: Ensures cards expand naturally based on their larger font sizing */
+  .animal-card,
+  .grid > div,
+  .card {
+    flex: 1 1 auto;
+    width: 100%;
+    padding-bottom: 1.5rem; /* Guarantees breathing room at the bottom of the card */
+  }
+}
+
