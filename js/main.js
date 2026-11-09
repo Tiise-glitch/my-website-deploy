@@ -5,7 +5,7 @@ const petProducts = [
     breed: 'Golden Retriever mix',
     category: 'Dogs',
     price: 2800,
-    image: '../images/Culture.webp',
+    image: 'images/Culture.webp',
     alt: 'Culture, a friendly Golden Retriever mix waiting for adoption'
   },
   {
@@ -14,7 +14,7 @@ const petProducts = [
     breed: 'Tabby kitten',
     category: 'Cats',
     price: 1800,
-    image: '../images/Milo.jpg',
+    image: 'images/Milo.jpg',
     alt: 'Milo, a playful tabby kitten'
   },
   {
@@ -23,7 +23,7 @@ const petProducts = [
     breed: 'Siamese cat',
     category: 'Cats',
     price: 2200,
-    image: '../images/Whiskers.webp',
+    image: 'images/Whiskers.webp',
     alt: 'Nala, a Siamese cat resting in the shelter'
   },
   {
@@ -32,7 +32,7 @@ const petProducts = [
     breed: 'Mixed-breed puppy',
     category: 'Dogs',
     price: 2600,
-    image: '../images/Mixed breed puppy.avif',
+    image: 'images/Mixed breed puppy.avif',
     alt: 'Buddy, a happy mixed-breed puppy'
   },
   {
@@ -41,7 +41,7 @@ const petProducts = [
     breed: 'Rescue bunny',
     category: 'Small Pets',
     price: 1500,
-    image: '../images/Korra.webp',
+    image: 'images/Korra.webp',
     alt: 'Korra, a rescue bunny enjoying a warm environment'
   }
 ];
@@ -195,7 +195,7 @@ function renderProducts() {
 
         if (runner && label) {
           label.textContent = `${petName} is on the move!`;
-          runner.style.backgroundImage = "url('../images/download.gif')";
+          runner.style.backgroundImage = "url('images/download.gif')";
           runner.classList.remove('run-animation');
           void runner.offsetWidth;
           runner.classList.add('run-animation');

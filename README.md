@@ -42,14 +42,14 @@ are set on a simple scale (`h1` 2.4rem, `h2` 1.7rem, `h3` 1.2rem) and body text 
 - The Enquiry and Contact pages use a two-column flex layout: intro content on the
   left, form panel on the right.
 
-### Visual Styles
+### Visual Styles (MDN Web Docs)
 - Interactive states are styled with pseudo-classes: `a:hover` underlines links and
   turns the logo teal, `nav a:hover` adds a teal bottom border, and `a:focus` shows a
   visible teal outline for keyboard users
 - Cards use `border-radius` and a light border for a soft, friendly look.
 - All five pages share one consistent stylesheet (`css/style.css`) 
 
-### Responsive Design
+### Responsive Design (Elemuwa, F)
 - **Breakpoints:** two media queries `max-width: 48rem` (768px, tablet) and
   `max-width: 30rem` (480px, mobile). Breakpoints are written in `rem` so they also
   respond to the user's base font-size settings.
@@ -61,7 +61,7 @@ are set on a simple scale (`h1` 2.4rem, `h2` 1.7rem, `h3` 1.2rem) and body text 
 - **Responsive images:** every `img` has `max-width: 100%; height: auto;` so images
   never overflow their containers, and animal card images use `object-fit: cover`.
 
-### Styling and responsive design
+### Styling and responsive design (MDN Web Docs)
 - Added the visual design and layout styling for the site.
 - Improved the page structure with responsive sections and content cards.
 - Updated the forms, buttons, and pages to look more professional.
@@ -72,7 +72,7 @@ are set on a simple scale (`h1` 2.4rem, `h2` 1.7rem, `h3` 1.2rem) and body text 
 - Added a responsive mobile menu for smaller screens.
 
 ## Part 3
-### 1. Problems fixed from earlier work Part 2
+### 1. Problems fixed from earlier work Part 2 (MDN Web Docs.)
 - Fixed broken or inconsistent page links across the website.
 - Corrected file naming and navigation issues so the pages open correctly.
 - Improved content hierarchy and readability with better headings and spacing.
@@ -110,7 +110,7 @@ are set on a simple scale (`h1` 2.4rem, `h2` 1.7rem, `h3` 1.2rem) and body text 
 - Protected important user-facing forms with clear validation checks.
 - Ensured the website structure remains clean, and responsive
 
-### 5. Additional requests 
+### 5. Additional requests (Google for Developers)
 - Robots.txt: Created to instruct search engine crawlers on which pages to index.
 - Sitemap.xml: Created to help search engines understand the website structure.
 - Sitemap image: Stored at images/SiteMap.png.
@@ -126,7 +126,7 @@ are set on a simple scale (`h1` 2.4rem, `h2` 1.7rem, `h3` 1.2rem) and body text 
 - README.md - updated project documentation
 
 ## Website pages
-- Home: HTML folder/Index.html
+- Home: index.html
 - About Us: HTML folder/about.html
 - Services: HTML folder/services.html
 - Enquiry: HTML folder/enquiry.html
@@ -178,4 +178,9 @@ contact.html                  Contact page
   [Accessed 6 October 2026].
 
 ##Part 3
-- MDN Web Docs. 2026. *Using media queries*. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_types
+- MDN Web Docs. 2026. *Using media queries*. [Online] Available at:
+<https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_types>
+ [Accessed 9 November 2026]
+- Google for Developers, 2025. *How to write and submit a robots.txt file*. [Online] Available at:
+<https://developers.google.com/crawling/docs/robots-txt/create-robots-txt>
+ [Accessed 9 November 2026]
