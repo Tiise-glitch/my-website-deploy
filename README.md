@@ -1,43 +1,27 @@
 # Paws & Hearts Animal Shelter Website
 
-## Student Information
-- **Full Name:** Tiisetso Chipa
-- **Student Number:** st10524693
-- **Module:** Web Development [INSERT MODULE CODE]
-- **Group:** Group 3
+## Student information
+- Full name: Tiisetso Chipa
+- Student number: st10524693
+- Module: Web Development
+- Group: Group 3
 
-## Project Overview
-Paws & Hearts Animal Shelter is a hypothetical non-profit organisation that rescues,
-rehabilitates and rehomes stray and abandoned animals in the local community. This
-repository contains the source code for its website, built as part of the Web
-Development Portfolio of Evidence (PoE).
+## Project milestone summary
+| Part 1 | Planning and website structure | Completed |
+| Part 2 | Styling and responsive design | Completed |
+| Part 3 | Functional improvements, JavaScript, and SEO | Completed |
 
-## Website Goals and Objectives
-- Increase local adoption enquiries.
-- Grow the volunteer base.
-- Raise awareness and donations to fund the shelter's day-to-day running costs.
-- KPIs: number of adoption enquiry submissions, volunteer sign-ups, and clicks on
-  the donate call-to-action.
+## Project overview
+Paws & Hearts is a fictional animal shelter website created to help animals in need find safe homes. The site promotes adoption, donations, volunteering, and pet welfare awareness. Part 3 focuses on improving the website by fixing earlier issues, adding JavaScript functionality, and improving search engine visibility.
 
-## Key Features and Functionality
-- Responsive 5-page website (Home, About Us, Services, Enquiry, Contact).
-- Consistent navigation across all pages.
-- Enquiry form covering adoption, volunteering, and sponsorship (client-side
-  validation to be added in Part 3).
-- Two locations listed on the Contact page (main shelter and satellite clinic).
+## Part 1
+### Website structure and planning
+- Created the initial website structure for the animal shelter brand.
+- Designed the main pages for home, about, services, enquiry, and contact.
+- Planned the navigation flow and basic content layout.
+- Set up the website with clear page hierarchy and basic content sections.
 
-## Timeline and Milestones
-
-| Part 1 | Planning, research, HTML structure | Weeks 1-4 |
-| Part 2 | CSS styling and responsive design | Weeks 5-8 |
-| Part 3 | JavaScript functionality, SEO, forms | Weeks 9-12 |
-
-## Part 1 Details
-- Website Project Proposal completed and approved for Paws & Hearts Animal Shelter.
-- Sitemap created (see below).
-- File and folder structure established.
-- HTML structure created for all 5 pages.
-
+## Part 2
 ## Part 2 Details
 
 ### Colour Palette and Design Choices
@@ -77,16 +61,76 @@ are set on a simple scale (`h1` 2.4rem, `h2` 1.7rem, `h3` 1.2rem) and body text 
 - **Responsive images:** every `img` has `max-width: 100%; height: auto;` so images
   never overflow their containers, and animal card images use `object-fit: cover`.
 
-### Screenshot Evidence (Home page)
+### Styling and responsive design
+- Added the visual design and layout styling for the site.
+- Improved the page structure with responsive sections and content cards.
+- Updated the forms, buttons, and pages to look more professional.
+- Corrected navigation and page consistency across the website.
+- Improved accessibility by using clear headings, spacing, and descriptive alt text.
+- Reworked the form layout to be clearer and easier to use on mobile devices.
+- Fixed layout issues so cards, buttons, and form content look cleaner and more consistent.
+- Added a responsive mobile menu for smaller screens.
 
-**Desktop (1366px):**
-![Home page on desktop](docs/screenshots/home-desktop.png)
+## Part 3
+### 1. Problems fixed from earlier work Part 2
+- Fixed broken or inconsistent page links across the website.
+- Corrected file naming and navigation issues so the pages open correctly.
+- Improved content hierarchy and readability with better headings and spacing.
+- Updated form layout and accessibility to make the site clearer and more user-friendly.
+- Added working JavaScript functionality
+- Improved overall layout consistency and responsiveness.
+- Added SEO metadata.
 
-**Tablet (768px):**
-![Home page on tablet](docs/screenshots/home-tablet.png)
+### 2. Functionality improvements
+- Added a working mobile navigation menu.
+- Added hover and animation effects to buttons, cards, and navigation links.
+- Added a search box to help users find animals by name or category.
+- Added category and price filters to refine the pet listings.
+- Loaded the pet data using JavaScript.
+- Added a lightbox so users can click animal images to view them larger.
+- Improved the enquiries and contact form layout for a more professional look.
+- Added working form validation with error messages and confirmation messages.
 
-**Mobile (390px):**
-![Home page on mobile](docs/screenshots/home-mobile.png)
+### 3. SEO improvements
+- Added unique page titles to every page.
+- Added meta descriptions to each page.
+- Added semantic headings and cleaner content hierarchy.
+- Added descriptive alt text to images.
+- Added viewport metadata for mobile devices.
+- Created a robots.txt file to guide search engine crawlers.
+- Created a sitemap.xml file for indexing.
+- Added the sitemap reference image in images/SiteMap.png.
+- Added social sharing for better preview cards on social media.
+- Improved page clarity and loading structure to support faster rendering.
+
+### 4. Security and performance updates
+- Avoided unnecessary external dependencies that may make the site slow or inconsistent.
+- Kept scripts lightweight and focused on required functionality.
+- Added browser-side validation to support form accuracy.
+- Protected important user-facing forms with clear validation checks.
+- Ensured the website structure remains clean, and responsive
+
+### 5. Additional requests 
+- Robots.txt: Created to instruct search engine crawlers on which pages to index.
+- Sitemap.xml: Created to help search engines understand the website structure.
+- Sitemap image: Stored at images/SiteMap.png.
+- Page speed: Improved by keeping the project lightweight and efficient.
+- Security: Added sensible validation and kept the site free from risky external dependencies.
+
+## Files added or updated for Part 3
+- css/style.css - updated styles for responsiveness, animation, buttons, filters, lightbox, and mobile layout
+- js/main.js - JavaScript for search, filter, loading data, lightbox, and responsive menu
+- js/main.test.js - basic validation tests for product search and filter functions
+- robots.txt - search engine crawling instructions
+- sitemap.xml - site index file
+- README.md - updated project documentation
+
+## Website pages
+- Home: HTML folder/Index.html
+- About Us: HTML folder/about.html
+- Services: HTML folder/services.html
+- Enquiry: HTML folder/enquiry.html
+- Contact: HTML folder/contact.html
 
 ## Sitemap
 The diagram below shows the website's structure: Home sits at the top level, with
@@ -132,3 +176,6 @@ contact.html                  Contact page
 - MDN Web Docs, 2026. *Responsive images*. [online] Available at:
   <https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images>
   [Accessed 6 October 2026].
+
+##Part 3
+- MDN Web Docs. 2026. *Using media queries*. [Online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_types
